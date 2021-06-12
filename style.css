@@ -52,13 +52,13 @@ body {
   justify-content: space-between;
 }
 
-h2 {
+.container__header {
   font-size: 2.25rem;
   font-family: var(--ff-maintext);
   color: var(--clr-heading);
 }
 
-p {
+.container__maintext {
   font-family: var(--ff-maintext);
   margin-right: 4rem;
   font-size: 0.94rem;
@@ -123,11 +123,11 @@ strong {
     width: 100%;
   }
 
-  h2 {
+  .container__header {
     font-size: 1.75rem;
   }
 
-  p {
+  .container__maintext {
     margin: 1rem;
     font-size: 0.85rem;
   }
