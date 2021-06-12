@@ -55,6 +55,8 @@ I still need more practice with the BEM Naming Convention. I will use other Fron
 
 - [http://getbem.com/naming/](http://getbem.com/naming/) - I tried using this information for the class-names. It is still a bit hard for me since it is very new, but I think I made some progress and will ask for feedback on Frontend Mentor.
 
+- [https://autoprefixer.github.io/](Autoprefixer CSS online) - I used this to make sure my CSS works in most browsers.
+
 ## Author
 
 - Frontend Mentor - [@royschrauwen](https://www.frontendmentor.io/profile/royschrauwen)
