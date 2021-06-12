@@ -5,6 +5,7 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -17,4 +18,133 @@
 
   --ff-maintext: "Inter", sans-serif;
   --ff-stats: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  color: var(--clr-paragraph);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--clr-main-dark);
+}
+
+.container {
+  background: var(--clr-main-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 69.3rem;
+  height: 28rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.container__left {
+  padding: 4.5rem;
+  padding-bottom: 3.5rem;
+  width: 35.55rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--ff-maintext);
+  color: var(--clr-heading);
+}
+
+p {
+  font-family: var(--ff-maintext);
+  margin-right: 4rem;
+  font-size: 0.94rem;
+  line-height: 1.7rem;
+  color: var(--clr-paragraph);
+  margin-bottom: 3rem;
+}
+
+strong {
+  color: var(--clr-main-accent);
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  margin-right: 4.65rem;
+}
+
+.stats__stat {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  font-family: var(--ff-maintext);
+}
+
+.stats__stat--statname {
+  color: var(--clr-stat-heading);
+  font-family: var(--ff-stats);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+}
+
+.container__right {
+  background: linear-gradient(
+      to right,
+      hsla(279, 100%, 30%, 0.5),
+      hsla(277, 100%, 30%, 0.5)
+    ),
+    url(./images/image-header-desktop.jpg) no-repeat;
+  height: 27.875rem;
+  width: 33.75rem;
+}
+
+@media only screen and (max-width: 70rem) {
+  .container {
+    margin: 1.5rem;
+    text-align: center;
+    flex-direction: column;
+    height: auto;
+    width: 20rem;
+    min-height: 49rem;
+  }
+
+  .container__left {
+    padding: 2rem;
+    order: 2;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    margin: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .stats__stat {
+    margin-top: 2rem;
+  }
+
+  .container__right {
+    order: 1;
+    height: 15rem;
+    width: 100%;
+    background-size: cover;
+  }
 }
