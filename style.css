@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
 *,
@@ -5,7 +12,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 :root {
@@ -23,19 +31,34 @@
 body {
   font-size: 15px;
   color: var(--clr-paragraph);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   background: var(--clr-main-dark);
 }
 
 .container {
   background: var(--clr-main-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 69.3rem;
   height: 28rem;
   border-radius: 0.5rem;
@@ -47,9 +70,16 @@ body {
   padding-bottom: 3.5rem;
   width: 35.55rem;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container__header {
@@ -72,10 +102,19 @@ strong {
 }
 
 .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: auto;
   margin-right: 4.65rem;
 }
@@ -97,6 +136,19 @@ strong {
 }
 
 .container__right {
+  background: -webkit-gradient(
+      linear,
+      left top, right top,
+      from(hsla(279, 100%, 30%, 0.5)),
+      to(hsla(277, 100%, 30%, 0.5))
+    ),
+    url(./images/image-header-desktop.jpg) no-repeat;
+  background: -o-linear-gradient(
+      left,
+      hsla(279, 100%, 30%, 0.5),
+      hsla(277, 100%, 30%, 0.5)
+    ),
+    url(./images/image-header-desktop.jpg) no-repeat;
   background: linear-gradient(
       to right,
       hsla(279, 100%, 30%, 0.5),
@@ -111,7 +163,10 @@ strong {
   .container {
     margin: 1.5rem;
     text-align: center;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: auto;
     width: 20rem;
     min-height: 49rem;
@@ -119,7 +174,9 @@ strong {
 
   .container__left {
     padding: 2rem;
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 100%;
   }
 
@@ -133,7 +190,10 @@ strong {
   }
 
   .stats {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 0;
   }
 
@@ -142,7 +202,9 @@ strong {
   }
 
   .container__right {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     height: 15rem;
     width: 100%;
     background-size: cover;
